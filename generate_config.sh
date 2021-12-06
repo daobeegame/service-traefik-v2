@@ -28,7 +28,7 @@ done
 
 regexEmail="^(([A-Za-z0-9]+((\.|\-|\_|\+)?[A-Za-z0-9]?)*[A-Za-z0-9]+)|[A-Za-z0-9]+)@(([A-Za-z0-9]+)+((\.|\-|\_)?([A-Za-z0-9]+)+)*)+\.([A-Za-z]{2,})+$"
 while [ -z "${TRAEFIK_ACME_EMAIL}" ]; do
-    SUGGESTED_EMAIL="info@palow.org"
+    SUGGESTED_EMAIL="info@daobee.net"
     read -p "LetsEncrypt ACME email address [$SUGGESTED_EMAIL]: " -i $SUGGESTED_EMAIL -e TRAEFIK_ACME_EMAIL
     if [[ ! $TRAEFIK_ACME_EMAIL =~ ${regexEmail} ]]; then
         echo "${TRAEFIK_ACME_EMAIL} is not a valid email address."
